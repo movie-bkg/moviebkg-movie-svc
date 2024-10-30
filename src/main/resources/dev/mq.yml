@@ -1,0 +1,36 @@
+#Configuration for mq queue managers. Can add new queue managers with new id, channel, host-name, mq-manager, port, concurrent-consumers, cache-producers, cache-consumers, session-cache-size
+moviebkg:
+  mq:
+    connect-timeout: 3
+    queue-managers:
+      -
+        id: qm1
+        channel: MQ.MBKG.DEV
+        host-name: localhost
+        mq-manager: MQ01
+        port: 61616
+        concurrent-consumers: 2
+        cache-producers: true
+        cache-consumers: true
+        session-cache-size: 50
+      -
+        id: qm2
+        channel: MQ.MBKG.DEV
+        host-name: localhost
+        mq-manager: MQ01
+        port: 61616
+        concurrent-consumers: 2
+        cache-producers: true
+        cache-consumers: true
+        session-cache-size: 50
+    #Configuration for consume queues. For consuming messages from other services
+    consume:
+      demo:
+        queue-manager-id: qm1
+        queue: DEMO_QUEUE
+    publish:
+      demo:
+        queue-manager-id: qm1
+        queue: DEMO_QUEUE
+  jms:
+    acknowledgement-mode: 2
