@@ -97,7 +97,7 @@
 						</exclude>
 					</excludes>
 					<jvmArguments>
-						-Dspring.config.location=classpath:db.yml,classpath:application.yml,classpath:mq.yml,classpath:tmdb.yml
+						-Dspring.config.location=classpath:db.yml,classpath:application.yml,classpath:mq.yml,classpath:tmdb.yml,classpath:service-call.yml
 					</jvmArguments>
 				</configuration>
 			</plugin>
@@ -116,9 +116,6 @@
 					<value>prod</value>
 				</property>
 			</activation>
-<!--			<properties>-->
-<!--				<spring.profiles.active>prod</spring.profiles.active>-->
-<!--			</properties>-->
 			<build>
 				<resources>
 					<resource>
@@ -152,7 +149,7 @@
 						<artifactId>spring-boot-maven-plugin</artifactId>
 						<configuration>
 							<jvmArguments>
-								-Dspring.config.location=classpath:db.yml,classpath:application.yml,classpath:mq.yml,classpath:tmdb.yml
+								-Dspring.config.location=classpath:db.yml,classpath:application.yml,classpath:mq.yml,classpath:tmdb.yml,classpath:service-call.yml
 							</jvmArguments>
 						</configuration>
 					</plugin>
@@ -166,7 +163,7 @@
 						</executions>
 						<configuration>
 							<argLine>
-								-Dspring.config.location=classpath:db.yml,classpath:application.yml,classpath:mq.yml,classpath:tmdb.yml
+								-Dspring.config.location=classpath:db.yml,classpath:application.yml,classpath:mq.yml,classpath:tmdb.yml,classpath:service-call.yml
 							</argLine>
 						</configuration>
 					</plugin>
@@ -196,9 +193,6 @@
 					<artifactId>spring-boot-starter-activemq</artifactId>
 				</dependency>
 			</dependencies>
-<!--			<properties>-->
-<!--				<spring.profiles.activate>dev</spring.profiles.activate>-->
-<!--			</properties>-->
 			<build>
 				<resources>
 					<resource>
@@ -224,7 +218,7 @@
 						<artifactId>spring-boot-maven-plugin</artifactId>
 						<configuration>
 							<jvmArguments>
-								-Dspring.config.location=classpath:dev/db.yml,classpath:application.yml,classpath:dev/mq.yml,classpath:tmdb.yml
+								-Dspring.config.location=classpath:dev/db.yml,classpath:application.yml,classpath:dev/mq.yml,classpath:tmdb.yml,classpath:service-call.yml
 							</jvmArguments>
 						</configuration>
 					</plugin>
@@ -238,7 +232,7 @@
 						</executions>
 						<configuration>
 							<argLine>
-								-Dspring.config.location=classpath:dev/db.yml,classpath:application.yml,classpath:dev/mq.yml,classpath:tmdb.yml
+								-Dspring.config.location=classpath:dev/db.yml,classpath:application.yml,classpath:dev/mq.yml,classpath:tmdb.yml,classpath:service-call.yml
 							</argLine>
 						</configuration>
 					</plugin>

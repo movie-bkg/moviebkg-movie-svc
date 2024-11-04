@@ -1,0 +1,11 @@
+#Endpoint in user service which will return user details
+user:
+  service:
+    fetch:
+      user:
+        endpoint: http://localhost:9090/usersvc/user/details/
+#Configuring username and password for Basic Authentication of user fetch api
+  auth:
+    user:
+      name: mvbkg-app
+      password: mvbkgdev

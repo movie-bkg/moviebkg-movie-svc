@@ -10,6 +10,7 @@ import com.sid.moviebkg.movie.flow.exception.MovieFlowException;
 import com.sid.moviebkg.movie.flow.movie.dto.request.MovieDto;
 import com.sid.moviebkg.movie.flow.movie.dto.request.MovieRequestDto;
 import com.sid.moviebkg.movie.flow.movie.repository.MovieRepository;
+import com.sid.moviebkg.movie.flow.user.service.FetchUserService;
 import com.sid.moviebkg.movie.mapper.CmnMapper;
 import com.sid.moviebkg.movie.tmdb.repository.GenreRepository;
 import com.sid.moviebkg.movie.ui.dtos.MovieResponseDto;
@@ -36,6 +37,7 @@ public class MovieServiceImpl implements MovieService {
     private final ValidationUtil validationUtil;
     private final CmnMapper cmnMapper;
     private final MovieResponseParser movieResponseParser;
+    private final FetchUserService fetchUserService;
 
     @Transactional
     @Override

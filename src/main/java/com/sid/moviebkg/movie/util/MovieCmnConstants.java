@@ -31,5 +31,7 @@ public class MovieCmnConstants {
 
     public static final String Y = "Y";
     public static final String N = "N";
+    public static final String COLON = ":";
+    public static final String BASIC = "Basic ";
 
 }
