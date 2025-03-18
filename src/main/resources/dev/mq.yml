@@ -26,11 +26,20 @@ moviebkg:
     #Configuration for consume queues. For consuming messages from other services
     consume:
       demo:
-        queue-manager-id: qm1
-        queue: DEMO_QUEUE
+        #Demo queue for consuming
+        demo:
+          queue-manager-id: qm1
+          queue: DEMO_QUEUE
     publish:
       demo:
-        queue-manager-id: qm1
-        queue: DEMO_QUEUE
+        #Demo queue for publishing
+        demo:
+          queue-manager-id: qm1
+          queue: DEMO_QUEUE
+      command:
+        #Publish Commands to websocket to be published to UI
+        mbkg-websocket-pub-svc:
+          queue-manager-id: qm2
+          queue: DEV_MBKG_MV_RTIME_JSON
   jms:
     acknowledgement-mode: 2

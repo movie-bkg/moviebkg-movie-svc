@@ -18,9 +18,9 @@ public class PublishToQueueController {
 
     private MBkgLogger logger = MBkgLoggerFactory.getLogger(PublishToQueueController.class);
 
-    @Value("${moviebkg.mq.publish.demo.queue-manager-id}")
+    @Value("${moviebkg.mq.publish.demo.demo.queue-manager-id}")
     private String routeQueueManagerId;
-    @Value("${moviebkg.mq.publish.demo.queue}")
+    @Value("${moviebkg.mq.publish.demo.demo.queue}")
     private String routeQueue;
     private final JsonUtils jsonUtils;
     private final ProducerTemplate producerTemplate;

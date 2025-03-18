@@ -1,7 +1,6 @@
 package com.sid.moviebkg.movie.util;
 
 public class MovieCmnConstants {
-
     private MovieCmnConstants() {}
 
     public static final String CONTENT_TYPE = "Content-Type";
@@ -33,5 +32,8 @@ public class MovieCmnConstants {
     public static final String N = "N";
     public static final String COLON = ":";
     public static final String BASIC = "Basic ";
+
+    public static final String COMMANDS_TO_PUBLISH = "commandsToPublish";
+
 
 }
